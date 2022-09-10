@@ -1,6 +1,9 @@
 // 样式初始化
 @import "~normalize.css";
 
+// ant-design 样式
+@import "~antd/dist/antd.css";
+
 body, html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, input, td, th, ins {
   padding: 0;
   margin: 0;
