@@ -6,13 +6,12 @@ import { SearchOutlined } from "@ant-design/icons";
 import { HeaderLeft, HeaderRight, HeaderWrapper } from "./style";
 
 import { headerLinks } from '@/common/local-data'
-import { IMenuList } from "@/types";
+import { IMenuList } from "@/common/types";
 const AppHeader = memo(() => {
   const showSelectItem = (item: IMenuList, index: number) => {
     if (index < 3) {
       return (
-        // exact 精准匹配路径
-        <NavLink to={item.link} exact>
+        <NavLink to={item.link}>
           {item.title}
           <i className="sprite_01 icon"></i>
         </NavLink>
