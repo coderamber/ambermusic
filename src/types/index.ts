@@ -3,8 +3,11 @@
  * 
  */
 
-// 菜单列表
-export interface IMenuList {
-  title?: string
-  link: string
+import { compose } from '@reduxjs/toolkit'
+
+declare global {
+  // 开发者工具配置
+  interface Window {
+    __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose
+  }
 }
