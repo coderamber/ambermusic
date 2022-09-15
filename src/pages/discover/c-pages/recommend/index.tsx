@@ -1,20 +1,13 @@
-import React, { memo, useEffect } from 'react'
-import { shallowEqual, useDispatch, useSelector } from 'react-redux'
-import { getTopBannerAction } from './store/actionCreators';
+import React, { memo } from 'react'
+import TopBanner from './c-cpns/top-banner'
+
+import { RecommendWrapper } from './style'
 const Recommend = () => {
 
-  const { topBanners } = useSelector((state: any) => ({
-    topBanners: state.recommendReducer.topBanners
-  }), shallowEqual)
-
-  const dispatch = useDispatch();
-  // 发送网络请求
-  useEffect(() => {
-    dispatch(getTopBannerAction())
-  },[dispatch])
-
   return (
-    <div>Recommend: {topBanners.length}</div>
+    <RecommendWrapper>
+      <TopBanner/>
+    </RecommendWrapper>
   )
 
 }
