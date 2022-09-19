@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react'
+import React, { memo } from 'react'
 
 import {
   DiscoverWrapper,
@@ -11,12 +11,6 @@ import { renderRoutes } from 'react-router-config';
 
 const Discover= memo((props) => {
   const { route } = props as any
-
-  useEffect(() => {
-    async function getData() {
-    }
-    getData()
-  }, [])
 
   return (
     <DiscoverWrapper>

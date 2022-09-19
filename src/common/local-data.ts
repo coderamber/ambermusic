@@ -68,7 +68,7 @@ export const footerImages: IMenuList[] = [
   }
 ]
 
-// discover中的数据
+// discover 中的数据
 export const discoverMenu: IMenuList[] = [
   {
     title: "推荐",
@@ -94,4 +94,28 @@ export const discoverMenu: IMenuList[] = [
     title: "新碟上架",
     link: "/discover/album"
   },
+]
+
+// discover - recommend - hot-recommend 的 TitleBar 菜单项
+export const hotRecommendMenu: IMenuList[] = [
+  {
+    title: "华语",
+    link: ""
+  },
+  {
+    title: "流行",
+    link: ""
+  },
+  {
+    title: "民谣",
+    link: ""
+  },
+  {
+    title: "摇滚",
+    link: ""
+  },
+  {
+    title: "电子",
+    link: ""
+  }
 ]
