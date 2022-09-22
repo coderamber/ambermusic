@@ -1,4 +1,4 @@
-import { ACTION_TYPE } from './constants';
+import { RECOMMEND_ACTION_TYPE } from './constants';
 import { getHotRecommend, getNewAlbum, getTopBanners, getTopList } from '@/pages/discover/c-pages/recommend/api/recommend'
 import { RootThunkAction } from '@/store';
 import { RANKING_TYPE } from '@/common/constance';
@@ -6,7 +6,7 @@ import { RANKING_TYPE } from '@/common/constance';
 // 轮播图 action
 export const changeTopBannerAction = (res: any) => {
   return {
-    type: ACTION_TYPE.CHANGE_TOP_BANNERS,
+    type: RECOMMEND_ACTION_TYPE.CHANGE_TOP_BANNERS,
     topBanners: res.banners
   }
 }
@@ -21,7 +21,7 @@ export const getTopBannerAction = (): RootThunkAction => {
 // 热门推荐 action
 export const changeHotRecommendAction = (res: any) => {
   return {
-    type: ACTION_TYPE.CHANGE_HOT_RECOMMED,
+    type: RECOMMEND_ACTION_TYPE.CHANGE_HOT_RECOMMED,
     hotRecommends: res.result
   }
 }
@@ -36,7 +36,7 @@ export const getHotRecommendAction = (limit: number) => {
 // 新碟上架 action
 export const changeNewAlbumAction = (res: any) => {
   return {
-    type: ACTION_TYPE.CHANGE_NEW_ALBUM,
+    type: RECOMMEND_ACTION_TYPE.CHANGE_NEW_ALBUM,
     newAlbums: res.monthData.slice(0, 9)
   }
 }
@@ -51,19 +51,19 @@ export const getNewAlbumAction = (limit: number) => {
 // 榜单飙升榜 action
 export const changeUpRankingAction = (res: any) => {
   return {
-    type: ACTION_TYPE.CHANGE_UP_RANKING,
+    type: RECOMMEND_ACTION_TYPE.CHANGE_UP_RANKING,
     upRanking: res.playlist
   }
 }
 export const changeNewRankingAction = (res: any) => {
   return {
-    type: ACTION_TYPE.CHANGE_NEW_RANKING,
+    type: RECOMMEND_ACTION_TYPE.CHANGE_NEW_RANKING,
     newRanking: res.playlist
   }
 }
 export const changeOriginRankingAction = (res: any) => {
   return {
-    type: ACTION_TYPE.CHANGE_ORIGIN_RANKING,
+    type: RECOMMEND_ACTION_TYPE.CHANGE_ORIGIN_RANKING,
     originRanking: res.playlist
   }
 }

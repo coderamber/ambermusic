@@ -3,7 +3,7 @@
  * 
  */
 
-export enum ACTION_TYPE {
+export enum RECOMMEND_ACTION_TYPE {
   // 轮播图数据
   CHANGE_TOP_BANNERS = 'RECOMMEND/CHANGE_TOP_BANNERS',
   // 热门推荐数据
