@@ -1,19 +1,18 @@
 import React from "react";
 
+import { Redirect } from "react-router-dom";
 import type { RouteConfig } from "react-router-config";
 
-import Discover from "@/pages/discover";
-import Recommend from "@/pages/discover/c-pages/recommend";
-import Singer from "@/pages/discover/c-pages/singer";
-import Ranking from "@/pages/discover/c-pages/ranking";
-import Songs from "@/pages/discover/c-pages/songs";
-import DjRadio from "@/pages/discover/c-pages/djradio";
-import Album from "@/pages/discover/c-pages/album";
-
-import Friend from "@/pages/friend";
-import Mine from "@/pages/mine";
-import { Redirect } from "react-router-dom";
-
+const Discover = React.lazy(() => import("@/pages/discover"))
+const Recommend = React.lazy(() => import("@/pages/discover/c-pages/recommend"))
+const Singer = React.lazy(() => import("@/pages/discover/c-pages/singer"))
+const Ranking = React.lazy(() => import("@/pages/discover/c-pages/ranking"))
+const Songs = React.lazy(() => import("@/pages/discover/c-pages/songs"))
+const DjRadio = React.lazy(() => import("@/pages/discover/c-pages/djradio"))
+const Album = React.lazy(() => import("@/pages/discover/c-pages/album"))
+const Player = React.lazy(() => import("@/pages/player"))
+const Friend = React.lazy(() => import("@/pages/friend"))
+const Mine = React.lazy(() => import("@/pages/mine"))
 
 /**
  * 页面路由配置
@@ -62,6 +61,10 @@ const routes: RouteConfig[] =[
       {
         path: '/discover/album',
         component: Album
+      },
+      {
+        path: '/discover/player',
+        component: Player
       }
     ]
   },
