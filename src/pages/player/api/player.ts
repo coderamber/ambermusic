@@ -9,3 +9,13 @@ export const getSongDetail = (ids: number) => {
     }
   })
 }
+
+// 获取歌词
+export const getLyric = (id: number) => {
+  return request.get({
+    url: '/lyric',
+    params: {
+      id
+    }
+  })
+}
